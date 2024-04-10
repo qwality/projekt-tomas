@@ -1,0 +1,15 @@
+servers:
+  this:
+    commands:
+      update: "git stash && git pull"
+      status: "lsof -i:3002"
+      status_check: "node uvicorn"
+  backend:
+    commands:
+      run: ""
+      stop: ""
+  frontend:
+    commands:
+      run: "npm --prefix ./frontend i && npm --prefix ./frontend run build -q && ndoe frontend/build &"
+      stop: "kill -9 $(lsof -t -i:3002)"
+
