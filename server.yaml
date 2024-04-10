@@ -10,6 +10,6 @@ servers:
       stop: ""
   frontend:
     commands:
-      run: "npm --prefix ./frontend i && npm --prefix ./frontend run build -q && ndoe frontend/build &"
+      run: "npm --prefix ./frontend i && npm --prefix ./frontend run build -q && PORT=3002 node frontend/build &"
       stop: "kill -9 $(lsof -t -i:3002)"
 
