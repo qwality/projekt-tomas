@@ -8,7 +8,7 @@
     import HamburgerIcon from "$lib/img/icon/common/hamburger.svg?component";
     import { constants } from "$lib/constants"
 
-    function toggleDrawer() {
+    function openDrawer() {
         drawerStore.open();
     }
 </script>
@@ -22,7 +22,7 @@
         <AppBar>
             <svelte:fragment slot="lead">
                 <!--   -->
-                <button class="md:hidden btn btn-sm mr-4" on:click={toggleDrawer}>
+                <button class="md:hidden btn btn-sm mr-4" on:click={openDrawer}>
                     <HamburgerIcon class="inline-block w-6 h-6 stroke-current" />
                 </button>
                 
